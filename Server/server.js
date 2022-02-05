@@ -3,7 +3,8 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 app.get('/', function(req, res){
-  res.sendfile('../Client/index.html');
+  var path = require('path');
+  res.sendfile(path.resolve('../Client/index.html'));
 });
 
 io.on('connection', function(socket){
