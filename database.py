@@ -20,3 +20,11 @@ def add_new_user(email, usern, passw):
     db.users.insert_one({'email': email, 'username': usern, 'password': passw})
     print("This ran")
     return flask.jsonify(message="success!")
+
+def login_user(usern, passw):
+    if(db.users.find({"username": usern, "password": passw})):
+        print("user exists!")
+        return True
+    else:
+        print("User does not exist")
+        return False

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 import database
 
 app = Flask(__name__)
@@ -28,8 +28,13 @@ def signup():
     return render_template('signup.html')
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        if(database.login_user(request.form['username'], request.form['password'])):
+            return redirect('/')
+        else:
+            return render_template('login.html')
     return render_template('login.html')
 
 
