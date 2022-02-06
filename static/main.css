@@ -14,7 +14,11 @@ header {
     top: 0;
 }
 
-.h1 {
+.loginH1 {
+  margin-top: 130px;
+}
+
+.signupH1 {
   margin-top: 130px;
 }
 
