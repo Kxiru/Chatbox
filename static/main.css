@@ -34,5 +34,14 @@ header {
   margin-top: 130px;
 }
 
+*{
+    font-family: 'Saira Condensed', sans-serif;
+}
 
+.body{
+    background-color: #fafafa;
+}
 
+.uploadLabel{
+    display: block;
+}
