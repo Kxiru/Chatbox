@@ -6,19 +6,42 @@
     
     <main>
         <h1 class="loginH1">Login </h1>
+        <form action="/signup">
+            <table>
+                <tr>
+                    <td> Username:</td>
+                    <td>
+                        <input type="text" id="username" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td> Password:</td>
+                    <td>
+                          <input type="password"placeholder="Enter Password"name="password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type ="checkbox" value="remember-me"> Remember me
+                    </td>
 
-        <div>
-            <th><label>Username:</label></th>
+                </tr>
+                <tr>
+                    <td>
+                        <input name = "submit" type="submit" value ="Sign Up">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    {% endblock %}
 
-            <input type="text" id="username" name="username">
-            <td><label> Password:</label><td></td>
-            <input type="password"placeholder="Enter Password"name="password" required>
 
-        </div>
-        <div class="checkbox mb-3">
-            <label>
-                <input type ="checkbox" value="remember-me"> Remember me
-            </label>
+
+
+
+
+
         </div>
         <button class = "w-100 btn btn-lg btn-primary"type="submit">Sign in</button>
     </main>
