@@ -5,10 +5,21 @@
 {% block content %}
     
     <main>
-        <h1>Login Page</h1>
+        <h1>Login </h1>
 
         <div>
+            <label>Username:</label>
+
             <input type="text" id="username" name="username">
+            <label> Password:</label>
+            <input type="password"placeholder="Enter Password"name="password" required>
+
         </div>
+        <div class="checkbox mb-3">
+            <label>
+                <input type ="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class = "w-100 btn btn-lg btn-primary"type="submit">Sign in</button>
     </main>
 {% endblock %}
