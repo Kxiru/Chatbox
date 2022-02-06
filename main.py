@@ -21,8 +21,9 @@ def profile():
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    # if request.method == 'POST':
-
+    if request.method == 'POST':
+        database.add_new_user(request.form['email'], request.form['username'], request.form['password'])
+        return redirect('/')
 
     return render_template('signup.html')
 

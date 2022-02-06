@@ -15,3 +15,8 @@ def test_add():
     print("This ran")
     # db.users.insert_one({'username': 'test1', 'password': 'pass1'})
     return flask.jsonify(message="success!")
+
+def add_new_user(email, usern, passw):
+    db.users.insert_one({'email': email, 'username': usern, 'password': passw})
+    print("This ran")
+    return flask.jsonify(message="success!")
