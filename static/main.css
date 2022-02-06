@@ -1,14 +1,14 @@
 .nav {
     color: white;
     width: 100%;
-    background-color: red;
+    background-color: cornflowerblue;
 
 }
 
 header {
     width: 100%;
     text-align: center;
-    background-color: red;
+    background-color: lightblue;
     font: 17px Helvetica, Arial;
     position: fixed;
     top: 0;
