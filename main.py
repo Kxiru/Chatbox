@@ -1,10 +1,11 @@
 from flask import Flask, render_template
+import database
 
 app = Flask(__name__)
-import database
 
 @app.route('/')
 def index():
+    database.test_add()
     return render_template('index.html')
 
 @app.route('/upload')
