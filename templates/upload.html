@@ -5,13 +5,13 @@
 {% block content %}
     
     <main>
-        <form action="/upload" method="post">
+        <form action="/upload" method="POST">
             <h1 class="uploadH1">Upload</h1>
-            <label class="uploadLabel" for="subject">Subject:</label>
-            <input type = "text" id="name" name="name" style="height:30px; width:80%; margin: 0 auto">
+            <label class="uploadLabel">Subject:</label>
+            <input type = "text" name="subject" style="height:30px; width:80%; margin: 0 auto">
 
-            <label class="uploadLabel" for= "name"> Enter Description :</label>
-            <input type="text" id="name" name="name" style="height:300px; width:80%; margin: 0 auto">
+            <label class="uploadLabel"> Enter Description :</label>
+            <input type="text"  name="description" style="height:300px; width:80%; margin: 0 auto">
 
             <input type="submit" value="Upload!" name="submit">
         </form>

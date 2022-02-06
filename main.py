@@ -3,14 +3,20 @@ import database
 
 app = Flask(__name__)
 
+curuser = ""
+
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    records = database.get_all_posts()
+    return render_template('index.html', posts=records, username=curuser)
 
 
-@app.route('/upload')
+@app.route('/upload', methods=['GET', 'POST'])
 def upload():
+    if request.method == 'POST':
+        database.newPost(request.form['subject'], request.form['description'])
+        return redirect('/')
     return render_template('upload.html')
 
 

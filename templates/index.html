@@ -6,5 +6,16 @@
     
     <main>
         <h1 class="indexH1">Home</h1>
+        Welcome {{ username }}
+
+        <div id="posts">
+            {% for user_post in posts %}
+            <hr>
+                <div class="post">
+                    <div class="meta">SUBJECT: {{ user_post['subject'] }}</div>
+                    <div class="body">DESCRIPTION: {{ user_post['description'] }}</div>
+                </div>
+            {% endfor %}
+        </div>
     </main>
 {% endblock %}
