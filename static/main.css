@@ -1,5 +1,22 @@
 .nav {
     color: white;
     width: 100%;
-    background-color: thistle;
+    background-color: red;
+
 }
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: red;
+    font: 17px Helvetica, Arial;
+    position: fixed;
+    top: 0;
+}
+
+.h1 {
+  margin-top: 130px;
+}
+
+
+
